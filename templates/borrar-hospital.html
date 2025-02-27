@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Mis Hospitales{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1>Eliminar Hospital</h1>
+        <form action="/borrar-hospital/eliminar" method="post">
+            <input type="text" name="nombre_actual" placeholder="Nombre hospital" required>
+            <button type="submit">Borrar</button>
+        </form>
+    </div>
+{% endblock %}

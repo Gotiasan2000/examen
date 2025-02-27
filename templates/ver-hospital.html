@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Mis Hospitales{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1>Lista de Hospitales</h1>
+        <form action="/ver-hospital.html" method="get">
+            <select name="nombre" size="5">
+                {% for hospital in hospitales %}
+                    <option value="{{ hospital }}">{{ hospital }}</option>
+                    <option value="{{ numero_pacientes }}">{{ numero_pacientes }}</option>
+                {% endfor %}
+            </select>
+        </form>
+    </div>
+{% endblock %}
